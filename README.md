@@ -175,4 +175,6 @@ The Random Forest model far outperformed the other approaches on the test and va
 In this step, I built a django application to deploy the machine learning model that was hosted on a local webserver. The application endpoint takes in a request with a list of values from a interface  listing and returns an estimated AQI. 
 
 
-<center><h3>Happy Coding ✌</h3></center>
+
+
+<h3>Happy Coding ✌</h3>
