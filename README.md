@@ -85,12 +85,14 @@ Benzene, toluene, xylene, and formaldehyde are well-known indoor air pollutants,
 In this notebook, the analysis has been done in two parts:
 
 **Analysis of the pollution level in India, over the years - from 2015 to 2020**
-> This will a holistic view of how the pollutant levels have been rising in India and what is the current situation.
+This will a holistic view of how the pollutant levels have been rising in India and what is the current situation.
 
 **Effect of Locksown on the Pollution level in India**
-> Here we shall examine the pollution level in India before and after the first stage of Lockdown.
-> Also we shall compare the pollution level around the same months in 2019, to see the the difference, if any.
-> Additionally we could also examine the difference between the the current dates and the winter months(October, November) of 2019 when the pollution levels are generally the highest in Northern parts of India.
+Here we shall examine the pollution level in India before and after the first stage of Lockdown.
+
+Also we shall compare the pollution level around the same months in 2019, to see the the difference, if any.
+
+Additionally we could also examine the difference between the the current dates and the winter months(October, November) of 2019 when the pollution levels are generally the highest in Northern parts of India.
 
 Analyzing data under these different categories should give us a fair idea of the effect of Lockdown on the Indian pollution level.
 
@@ -133,6 +135,9 @@ The data has been made publicly available by the Central Pollution Control Board
 
 After scraping the data, I needed to clean it up so that it was usable for our model. I fill the missing values using median, because the distribution of data is skewed.
 
+## Data Preprocessing
+
+In this stage, I looked at the distribution of data and find that distribution of each feature is skewed. If we feed this skewed data to the machine learning model, the model will learn the skewed data that will give us high error rate and it also affects the accuracy of the model. So I have converted those skewed distribution into normal distribution.
 
 ## Exploratory Data Analysis
 
@@ -169,4 +174,4 @@ The Random Forest model far outperformed the other approaches on the test and va
 ## Model Deployement
 In this step, I built a django application to deploy the machine learning model that was hosted on a local webserver. The application endpoint takes in a request with a list of values from a interface  listing and returns an estimated AQI. 
 
-
+<h3>Happy Coding ✌</h3>
