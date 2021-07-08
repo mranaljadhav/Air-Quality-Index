@@ -112,6 +112,7 @@ Ahmedabad, Aizawl, Amaravati, Amritsar, Bengaluru, Bhopal, Brajrajnagar, Chandig
 ## Code and Resources Used 
 
 **Python Version:** 3.8
+
 **For Web Framework Requirements:**  ```pip install -r requirements.txt``` 
 
 ## Install
