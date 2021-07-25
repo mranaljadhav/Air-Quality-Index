@@ -96,10 +96,6 @@ Additionally we could also examine the difference between the the current dates 
 
 Analyzing data under these different categories should give us a fair idea of the effect of Lockdown on the Indian pollution level.
 
-## Context
-
-Air is what keeps humans alive. Monitoring it and understanding its quality is of immense importance to our well-being.
-
 ## Content
 
 The dataset contains air quality data and AQI (Air Quality Index) on  daily level across multiple cities in India.
