@@ -171,6 +171,8 @@ The Random Forest model far outperformed the other approaches on the test and va
 ## Model Deployement
 In this step, I built a django application to deploy the machine learning model that was hosted on a local webserver. The application endpoint takes in a request with a list of values from a interface  listing and returns an estimated AQI. 
 
+### Deployment Link -->  https://india-air-quality-index.herokuapp.com/
+
 <div align="center">
   <br>
   <br>
