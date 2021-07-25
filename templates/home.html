@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            .box-element{
+                box-shadow:hsl(0, 0%, 80%) 0 0 16px;
+                background-color: #fff;
+                border-radius: 4px;
+                padding: 30px;
+                width: 100%;
+                    }
+        </style>
+    </head>
+        <body>
+            {% include 'base.html' %}
+            <div class="view" style="background-image: url('https://fwiw.imgix.net/wp-content/uploads/sites/2/2020/04/shutterstock_1354816103.jpg?w=1400'); background-repeat: no-repeat; background-size: cover; background-position: center center;">      
+                <div class = 'card-body'>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                    <h2 style = color:black;>Air Quality Index</h2>
+                    <hr>
+                        <form style = 'width:25%;height:auto;' method = "POST" action="{% url 'home' %}">
+                            {% csrf_token %}
+                            PM2.5 : <input  type="number" step="0.01" required name='pm1'>
+                            PM10 : <input type="number" step="0.01" required  name='pm2'>
+                            NO : <input type="number" step="0.01" required  name='NO'><br><br>
+                            NO2 : <input type="number" step="0.01" required  name='NO2'><br><br>
+                            NOx : <input type="number" step="0.01" required  name='NOx'><br><br>
+                            NH3 : <input type="number" step="0.01" required  name='NH3'><br><br>
+                            CO : <input type="number" step="0.01" required  name='CO'><br><br>
+                            SO2 : <input type="number" step="0.01" required  name='SO2'><br><br>
+                            O3 : <input type="number" step="0.01" required  name='O3'><br><br>
+                            Benzene : <input type="number" step="0.01" required  name='Benzene'><br><br>
+                            Toluene : <input type="number" step="0.01" required  name='Toluene'><br><br>
+                            Xylene : <input type="number" step="0.01" required  name='Xylene'><br><br>
+                            <button type="submit" name="submit" class="btn btn-success">Predict</button><br><br>
+                            
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="background-color:white;">
+                <pre style="text-align: left; font-family: normal; font-size:6vw; background-color:white;"> {{ res  }} </pre>
+            </div>
+            {% include 'footer.html' %}
+        </body>
+</html>
